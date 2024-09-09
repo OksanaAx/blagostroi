@@ -27,6 +27,11 @@ header nav{
    
 
 }
+.smol{
+    display: flex;
+    gap: 80px;
+    padding: 0px 20px
+}
 header a{
     color: rgb(24, 18, 15);
     text-decoration: none;
@@ -79,19 +84,20 @@ header a:hover{
 
 
 .whatsapp {
-    all: unset; 
+    width: 250px;
     font-size: 18px;
     border-radius: 88px;
     padding: 16px 12px;
     background: #E9672B;
     border: 2px solid #E9672B;
-    margin-top: 1200px;
+    margin-top: 12px;
 }     
 .whatsapp a{
     color: rgb(24, 18, 15);
     text-decoration: none;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 600;
+    padding-top: 10px;
    
   
 }
@@ -149,17 +155,20 @@ h2{
 .gallery{
     width: 85%;   
     margin: 20px;
+    padding: 0px 100px;
+  
 }  
 
 .big-photos{
     width: 100%;
     height: 700px;
     position: relative;
+   
 }
 .big-photos>img{
     display: block;
     width: 100%;
-    height: 400px;
+    
 }
 button{
     all: unset;
@@ -273,7 +282,12 @@ footer {
     cursor: pointer;
 }
 
+.footer-social{
+    position: absolute;
+    right:  300px;
+}
 .footer-social__links {
+   
     display: flex;
     gap: 16px;
     margin-bottom: 54px;
@@ -288,6 +302,7 @@ footer {
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
+    
 }
 
 .footer-social__links a:hover {
@@ -302,6 +317,7 @@ footer {
     width: 300px;
     border: 1px solid black;
     margin-top: 60px;
+    
 }
 
 
@@ -339,8 +355,11 @@ footer {
 
     .car {
         display: grid;
-        grid-template-columns: repeat(2, 450px);
-        grid-template-rows: calc(2, 450px);
+        grid-template-columns: repeat(2, 2fr);
+        grid-template-rows: calc(2, 42fr);
+    }
+    .footer-link{
+        display: none;
     }
 }
 
@@ -348,7 +367,6 @@ footer {
 
 @media screen and (max-width: 576px) {
     
-
 
     header {
         padding: 0px 24px;
@@ -360,14 +378,37 @@ footer {
         width: 100%;
     }
 
-     
-
-    footer{
-        padding: 82px 24px 208px;
+    .smol{
+        display: none;
     }
 
-    .car {
+     .companiy{
+        display: none;
+     }
+     .gallery{
+        display: none;
+     }
+
+     .car {
         display: grid;
         grid-template-columns:  1fr;
+        grid-template-rows: calc(9, 450px);
+       
     }
+
+    footer{
+        padding: 82px 24px 2px;
+    }
+
+    .footer-link{
+        display: none;
+    }
+    .footer-social{
+        position: absolute;
+        left: 50px;
+        right: 50px;
+        
+    }
+
+   
 }
